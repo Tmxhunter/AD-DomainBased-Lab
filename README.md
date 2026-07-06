@@ -1,6 +1,6 @@
 # Detecting Brute Force Authentication and Post-Compromise Activity in a Windows Active Directory Environment
 
-![Splunk](https://img.shields.io/badge/SIEM-Splunk-black?logo=splunk) ![Sysmon](https://img.shields.io/badge/Telemetry-Sysmon-blue) ![MITRE ATT%26CK](https://img.shields.io/badge/Framework-MITRE%20ATT%26CK-red) ![Atomic Red Team](https://img.shields.io/badge/Testing-Atomic%20Red%20Team-orange) ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Splunk](https://img.shields.io/badge/SIEM-Splunk-black?logo=splunk) ![Sysmon](https://img.shields.io/badge/Telemetry-Sysmon-blue) ![MITRE ATT%26CK](https://img.shields.io/badge/Framework-MITRE%20ATT%26CK-red) ![Atomic Red Team](https://img.shields.io/badge/Testing-Atomic%20Red%20Team-orange) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 **Author:** Jose Galdamez-Interiano
 **Date:** July 2026
