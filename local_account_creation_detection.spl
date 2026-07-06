@@ -1,0 +1,11 @@
+
+`` Detection: New Local User Creation & Privileged Group Addition (T1136.001) ``
+`` Data Source: Windows Security Event Log (Event ID 4720 / 4732) ``
+
+index=endpoint (EventCode=4720 OR EventCode=4732)
+| table _time, EventCode, Account_Name, Group_Name, Computer
+
+`` EventCode 4720 = A user account was created ``
+`` EventCode 4732 = A member was added to a security-enabled local group ``
+`` Correlating both event codes on the same account within a short window ``
+`` flags the higher-severity pattern: new account + immediate admin rights. ``

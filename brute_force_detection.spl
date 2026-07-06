@@ -1,0 +1,17 @@
+
+`` Detection: Brute Force Authentication (T1110.001) ``
+`` Data Source: Windows Security Event Log (Event ID 4625 / 4624) ``
+
+`` Step 1: Identify failed logon clusters ``
+index=endpoint EventCode=4625
+| bin _time span=2m
+| stats count by _time, Account_Name, Source_Network_Address
+| where count >= 5
+
+`` Step 2: Confirm follow-on successful logon for the same account ``
+index=endpoint EventCode=4624 Account_Name=tsmith
+| table _time, Account_Name, Source_Network_Address, Logon_Type
+
+`` Tuning note: 3-failure threshold produced false positives from mistyped ``
+`` passwords during normal login. 5+ failures within a 2-minute window ``
+`` preserved detection of the simulated attack while reducing noise. ``
